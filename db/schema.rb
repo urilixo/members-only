@@ -21,12 +21,24 @@ ActiveRecord::Schema.define(version: 2022_03_02_203230) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "posts_users", id: false, force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.integer "user_id", null: false
+    t.index ["post_id", "user_id"], name: "index_posts_users_on_post_id_and_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "email"
     t.string "password"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "posts", "users"
