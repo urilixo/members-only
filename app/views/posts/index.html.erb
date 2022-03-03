@@ -1,4 +1,17 @@
 <p id="notice"><%= notice %></p>
+<div class="section">
+  <div class="container">
+    <div class="columns centered">
+      <div class="column is-size-4">
+      <% if user_signed_in? %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'button is-info'%>
+      <% end  %>
+
+      
+      </div>
+    </div>
+  </div>
+</div>
 
 <h1>Posts</h1>
 
