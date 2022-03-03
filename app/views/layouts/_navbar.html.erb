@@ -1,5 +1,9 @@
 <div class="navbar has-background-warning">
-  <div class="navbar-brand"></div>
+  <div class="navbar-start">
+    <div class="navbar-item">
+      <%= link_to "Members Only", root_path %>
+    </div>
+  </div>
   <div class="navbar-end">
     <% if user_signed_in? %>
     <div class="navbar-item has-text-centered is-size-4 has-text-black"> <%= current_user.username.humanize %> </div>
