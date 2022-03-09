@@ -1,24 +1,13 @@
-# README
+# Members Only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Purpose
+This was created as part of a lesson of [TheOdinProject](https://www.theodinproject.com/) curriculum, the main goal being familiarization with the Devise gem for authentication
 
-Things you may want to cover:
+## Thoughts
+While the main goal was to introduce authentication, it also served as a practical lesson on the usage of rails generators to create scaffolding, models and migrations.
 
-* Ruby version
+Due to being the first project with authentication, I could also experience the idea of conditionals inside the views, changing the page based on the privileges of the current user.
 
-* System dependencies
+## Demo
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project can be seen currently in a [Heroku](https://dry-oasis-89157.herokuapp.com/).
